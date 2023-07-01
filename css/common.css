@@ -68,6 +68,15 @@ body {
     box-shadow: 0 4px 0 #299A82;;
     transform: translateY(10px);
   }
+  .btn-yellow {
+    background-color: #FFC939;
+    box-shadow: 0 14px 0 #299A82;
+    color: #FFFFFF;
+  }
+  .btn-yellow:active {
+    box-shadow: 0 4px 0 #299A82;;
+    transform: translateY(10px);
+  }
   .btn-gray {
     background-color: #F2F4F6;
     box-shadow: 0 14px 0 #DFE1E2;

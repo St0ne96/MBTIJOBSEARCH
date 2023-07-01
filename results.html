@@ -30,6 +30,11 @@
   <link rel="stylesheet" href="./css/results.css">
   <script defer src="./js/share.js"></script>
   <script type="module" defer src="./js/results.js"></script>
+  <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+  <script src="./js/key.js"></script> 
+  <script>
+    Kakao.init(KAKAO_API_KEY);
+  </script>
 </head>
 <body>
   <h2 class="page-subtitle">
@@ -58,6 +63,9 @@
   </div>
   <div class="btn btn-green btn-small share-or-copy">
     결과 공유하기
+  </div>
+  <div class="btn btn-yellow btn-small share-or-copy" onclick="shareToKakao()">
+    카카오 공유하기
   </div>
   <a href="/" class="btn btn-gray btn-small">
     다시 테스트하기

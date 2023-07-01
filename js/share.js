@@ -14,8 +14,8 @@ document.body.append(healthEl)
 // 모바일 브라우저 내장 공유 기능!
 async function startNativeShare() {
   await navigator.share({
-    title: '내 안에 숨어있는 직업캐 찾기!',
-    text: '누구나 찰떡인 직업이 있어요! 내 안에 숨어있는 직업캐를 찾아보세요!',
+    title: '내 안에 숨어있는 직업 찾기!',
+    text: '누구나 찰떡인 직업이 있어요! 내 안에 숨어있는 직업을 찾아보세요!',
     url: location.href // 현재 페이지 주소!
   })
 }
@@ -58,5 +58,46 @@ btnEl?.addEventListener('click', async function () {
   }
   if (isSupportedClipboard || isSupportedClipboardCommand) {
     await copyToClipboard()
+    return;
   }
+  shareToKakao();
 })
+
+// 카카오 공유버튼 
+async function shareToKakao() {
+  // 공유할 URL
+  const shareUrl = "https://spiffy-scone-a2cc09.netlify.app/";
+
+  // 공유할 이미지 URL
+  const shareImage = "https://raw.githubusercontent.com/St0ne96/MBTIJOBSEARCH/main/images/thumbnailkakao.jpg";
+
+  // 공유할 제목
+  const shareTitle = "내 안에 숨어있는 직업 찾기!";
+
+  // 공유할 설명
+  const shareDescription = "누구나 찰떡인 직업이 있어요! 내 안에 숨어있는 직업을 찾아보세요!";
+
+  // 카카오링크 생성
+  Kakao.Link.sendDefault({
+    objectType: "feed",
+    content: {
+      title: shareTitle,
+      description: shareDescription,
+      imageUrl: shareImage,
+      link: {
+        webUrl: shareUrl,
+        mobileWebUrl: shareUrl
+      }
+    },
+    buttons: [
+      {
+        title: "웹에서 보기",
+        link: {
+          webUrl: shareUrl,
+          mobileWebUrl: shareUrl
+        }
+      }
+    ]
+  });
+}
+
