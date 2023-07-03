@@ -8,6 +8,11 @@ site : [나에게 어울리는 직업은?!!](https://spiffy-scone-a2cc09.netlify
 간단한 질문들을 통해서 내 성향에 맞는 어울리는 직업을 찾아보는 사이트 입니다. 
 
 ### Site Preview  
+![image](https://raw.githubusercontent.com/St0ne96/MBTIJOBSEARCH/main/images/readmeintro.png)  
+
+![image](https://raw.githubusercontent.com/St0ne96/MBTIJOBSEARCH/main/images/readmeintro2.png)  
+
+![image](https://raw.githubusercontent.com/St0ne96/MBTIJOBSEARCH/main/images/readmeintro3.png) 
 
 
 ### last release 
